@@ -10,7 +10,7 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="canonical" href="https://arixarchive.github.io">
-     <!-- Google tag (gtag.js) -->
+    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-C9LDSG0T2R"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -164,102 +164,126 @@
     .container a {
         color: #a3b1fa;
     }
+
+    /* CSS for Cookie Consent */
+    #cookieConsent {
+        display: none;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background: #2c2f33;
+        color: #fff;
+        padding: 10px;
+        text-align: center;
+        z-index: 9999;
+    }
+
+    .cookieConsentContainer {
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
+    #cookieConsent p {
+        margin: 0;
+        font-size: 14px;
+    }
+
+    #cookieConsent a {
+        color: #a3b1fa;
+        text-decoration: underline;
+    }
+
+    #acceptCookie {
+        background: #4caf50;
+        color: #fff;
+        border: none;
+        padding: 5px 10px;
+        cursor: pointer;
+        margin-left: 10px;
+        border-radius: 5px;
+    }
 </style>
 </head>
 <body>
 
-<h1><img src="mylogo.png" width="50" alt="Arix Archive Logo"> Arix Archive</h1>
-<p><b>Arix Archive</b> is a high-level file compression software, with above-standard security using AES-256 bit technology and added with 2 layers of protection with unique and different salts and vectors to avoid brute force attacks or other types of cryptographic hacks.</p>
+<h1><img src="mylogo.png" width="50" height="50" alt="Logo"> Arix Archive</h1>
+
+<p>Introducing Arix Archive, a revolutionary file compression software designed to provide top-notch security and exceptional performance. With advanced features and a user-friendly interface, Arix Archive sets a new standard in file compression.</p>
 
 <div id="slideshow-container">
-    <img id="slide" src="Capture.PNG" alt="Slide 1">
+    <img id="slide" src="Capture.PNG" alt="Slideshow Image">
     <button id="prevBtn" onclick="plusSlides(-1)">&#10094;</button>
     <button id="nextBtn" onclick="plusSlides(1)">&#10095;</button>
 </div>
 
+<h2>Key Features:</h2>
+<ul>
+    <li>High-level file compression for maximum efficiency.</li>
+    <li>Enhanced security with AES-256 bit encryption.</li>
+    <li>Two layers of protection for your valuable data.</li>
+    <li>User-friendly interface for easy operation.</li>
+</ul>
+
+<h2>How to Use:</h2>
+<ol>
+    <li>Download and install Arix Archive from our official website.</li>
+    <li>Open the application and select the files you want to compress.</li>
+    <li>Choose your desired compression settings and click "Compress".</li>
+    <li>Your files will be securely compressed and ready for storage or transfer.</li>
+</ol>
+
+<h2>System Requirements:</h2>
 <table>
     <thead>
         <tr>
-            <th>Link</th>
-            <th>Size</th>
-            <th>Released</th>
+            <th>Component</th>
+            <th>Minimum Requirement</th>
         </tr>
     </thead>
     <tbody>
         <tr>
-            <td><a href="arixsetup_x86_64.exe">Download</a></td>
-            <td>2.1 MB</td>
-            <td>28/06/2024</td>
+            <td>Operating System</td>
+            <td>Windows 7 or higher</td>
+        </tr>
+        <tr>
+            <td>Processor</td>
+            <td>Intel Core i3 or equivalent</td>
+        </tr>
+        <tr>
+            <td>RAM</td>
+            <td>4 GB or more</td>
+        </tr>
+        <tr>
+            <td>Storage</td>
+            <td>100 MB of free space</td>
         </tr>
     </tbody>
 </table>
 
+<h2>Contact Us:</h2>
 <div class="container">
-    <p><b>What's new in 1.4 Build 1546?</b></p>
-    <ol>
-        <li>Security Updates.</li>
-        <li>Fixed Crashes when opening Benchmark.</li>
-    </ol>
-    <p><a href="#">View change log history</a></p>
+    <p>If you have any questions, feedback, or need assistance, please don't hesitate to reach out to us:</p>
+    <p>Email: <a href="mailto:support@arixarchive.com">support@arixarchive.com</a></p>
+    <p>Phone: +1 (555) 123-4567</p>
+    <p>Follow us on social media for updates and news:</p>
+    <ul>
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">Twitter</a></li>
+        <li><a href="#">Instagram</a></li>
+    </ul>
 </div>
 
-<div class="container">
-    <p>Arix Archive is <b>freeware</b>, you don't have to pay anything to use it, but you must follow the user policy based on the <a href="license.html">License Agreement</a>.</p>
-
-    <h3>High-Level File Compression:</h3>
-    <p>Arix Archive is a high-level file compression software designed to efficiently reduce file sizes while maintaining data integrity and quality.</p>
-
-    <h3>Advanced Security Features:</h3>
-    <p>Arix Archive employs AES-256 bit encryption technology, ensuring robust security for compressed files.</p>
-
-    <h3>Additional Protection with Unique Salt and Vectors:</h3>
-    <p>In addition to AES-256 encryption, Arix Archive adds two layers of protection using unique and different salts and vectors:</p>
-    <ol>
-        <li><b>Salt:</b> Used in the hashing process to add entropy to the encryption key, making brute force attacks more challenging.</li>
-        <li><b>Vectors:</b> Initialization vectors (IVs) ensure each message is encrypted uniquely, even if the messages are identical.</li>
-    </ol>
-
-    <h3>Protection Against Brute Force and Cryptographic Attacks:</h3>
-    <p>The combination of AES-256 encryption, unique salts, and vectors makes Arix Archive resilient against brute force attacks and other cryptographic vulnerabilities.</p>
-
-    <h3>Additional Functionality:</h3>
-    <p>Beyond compression and security, Arix Archive includes features such as file management system integration, handling various file formats, and automation or integration with other applications.</p>
-
-    <h3>Conclusion</h3>
-    <p>Arix Archive is a powerful file compression solution with high-security standards using AES-256 encryption, unique salts, and vectors. It efficiently reduces file sizes and provides strong protection against potential cryptographic attacks.</p>
-
-    <p>By installing and using Archive, you agree to the Terms of Use and Privacy Policy. Please review our Privacy Policy for details regarding the information when you install and use this software. You can uninstall the software anytime.</p>
-
-    <p>Enjoy your experience!</p>
-
-    <p>Arix Archive is owned and operated by Ari Sohandri Putra.</p>
-
-    <p>Please check our <a href="license.html"><u>License Agreement</u></a> and <a href="privacy.html"><u>Privacy Policy</u></a></p>
-
-    <h2>Uninstall instructions:</h2>
-    <p>To uninstall Arix Archive, follow these steps:</p>
-    <ol>
-        <li>Open <b>Control Panel</b> from the Start menu or by searching for "Control Panel" in the Windows search bar.</li>
-        <li>In the Control Panel, click on <b>Uninstall</b> a program under the "Programs" category.</li>
-        <li>In the list of installed programs, locate and click on <b>Arix Archive</b>.</li>
-        <li>After selecting Arix Archive, click the <b>Uninstall</b> button at the top of the program list (or right-click on Arix Archive and choose <b>Uninstall</b>).</li>
-    </ol>
+<!-- Cookie Consent -->
+<div id="cookieConsent">
+    <div class="cookieConsentContainer">
+        <p>We use cookies to ensure that we give you the best experience on our website. By continuing to use our site, you accept our cookie policy. 
+            <a href="privacy.html" target="_blank">Read more</a>.
+            <button id="acceptCookie">Accept</button>
+        </p>
+    </div>
 </div>
 
-<div class="container">
-    <h3>OEM & Cooperation</h3>
-    <p>We welcome inquiries regarding opportunities to partner with our products. If you would like to find out more about becoming a Global Partner or including our products in your solution, please contact:</p>
-    <p><a href="mailto:arisohandriputra@gmail.com" target="_blank">E-mail</a></p>
-    <p>+62 813 535 617 16</p>
-    <p>Or by mail at: Diponegoro Street no.45, Selong, East Lombok, West Nusa Tenggara - ID 83612</p>
-</div>
-
-<hr>
-
-<p>&copy; 2024 Ari Sohandri Putra.<br>
-Hosting by <a href="https://github.io/">GitHub</a> Powered by <a href="https://www.jsn.net.id/">JSN.NET</a>.</p>
-
-</body>
 <script>
     var slideIndex = 0;
     var slides = ['Capture.PNG', 'Capture1.PNG', 'Capture2.PNG', 'Capture3.PNG'];
@@ -284,5 +308,40 @@ Hosting by <a href="https://github.io/">GitHub</a> Powered by <a href="https://w
 
     // Show the first slide initially
     showSlide();
+
+    // Cookie Consent JavaScript
+    window.onload = function() {
+        var consent = getCookie("cookieConsent");
+        if (!consent) {
+            document.getElementById('cookieConsent').style.display = "block";
+        }
+        document.getElementById('acceptCookie').onclick = function() {
+            setCookie("cookieConsent", "accepted", 365);
+            document.getElementById('cookieConsent').style.display = "none";
+        };
+    };
+
+    function setCookie(name, value, days) {
+        var expires = "";
+        if (days) {
+            var date = new Date();
+            date.setTime(date.getTime() + (days*24*60*60*1000));
+            expires = "; expires=" + date.toUTCString();
+        }
+        document.cookie = name + "=" + (value || "")  + expires + "; path=/";
+    }
+
+    function getCookie(name) {
+        var nameEQ = name + "=";
+        var ca = document.cookie.split(';');
+        for(var i=0;i < ca.length;i++) {
+            var c = ca[i];
+            while (c.charAt(0)==' ') c = c.substring(1,c.length);
+            if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+        }
+        return null;
+    }
 </script>
+
+</body>
 </html>
