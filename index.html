@@ -203,6 +203,45 @@
         margin-left: 10px;
         border-radius: 5px;
     }
+    .video-container {
+    position: relative;
+    width: 80%;
+    max-width: 800px;
+}
+
+video {
+    width: 100%;
+    height: auto;
+    border: 3px solid #444;
+    border-radius: 10px;
+}
+
+.controls {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.controls button,
+.controls input[type="range"] {
+    margin: 0 10px;
+    background: #444;
+    border: none;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.controls button:hover,
+.controls input[type="range"]:hover {
+    background: #666;
+}
 </style>
 </head>
 <body>
@@ -251,7 +290,15 @@
 
 <h3>Additional Functionality:</h3>
 <p>Beyond compression and security, Arix Archive may include features such as file management system integration, capabilities to handle and process files in various formats, and possibly automation or integration with other applications.</p>
-
+<h3>How to Use</h3>
+  <div class="video-container">
+        <video id="videoPlayer" controls>
+            <source src="vidtutor.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="controls">
+        </div>
+    </div>
 <h3>Conclusion</h3>
 <p>Arix Archive stands out as a powerful file compression solution with a focus on high-security standards using AES-256 encryption, unique salts, and vectors. It not only efficiently reduces file sizes but also provides strong protection against potential cryptographic attacks.</p>
 
@@ -373,6 +420,53 @@ Hosting by <a href="https://github.io">GitHub</a> Powered by <a href="https://ww
         }
         return null;
     }
+    document.addEventListener("DOMContentLoaded", function() {
+    var video = document.getElementById("videoPlayer");
+    var playPauseButton = document.getElementById("playPause");
+    var muteButton = document.getElementById("mute");
+    var fullScreenButton = document.getElementById("fullScreen");
+    var seekBar = document.getElementById("seekBar");
+    var volumeBar = document.getElementById("volumeBar");
+
+    playPauseButton.addEventListener("click", function() {
+        if (video.paused) {
+            video.play();
+            playPauseButton.textContent = "Pause";
+        } else {
+            video.pause();
+            playPauseButton.textContent = "Play";
+        }
+    });
+
+    muteButton.addEventListener("click", function() {
+        video.muted = !video.muted;
+        muteButton.textContent = video.muted ? "Unmute" : "Mute";
+    });
+
+    fullScreenButton.addEventListener("click", function() {
+        if (video.requestFullscreen) {
+            video.requestFullscreen();
+        } else if (video.mozRequestFullScreen) {
+            video.mozRequestFullScreen();
+        } else if (video.webkitRequestFullscreen) {
+            video.webkitRequestFullscreen();
+        }
+    });
+
+    video.addEventListener("timeupdate", function() {
+        var value = (100 / video.duration) * video.currentTime;
+        seekBar.value = value;
+    });
+
+    seekBar.addEventListener("input", function() {
+        var time = video.duration * (seekBar.value / 100);
+        video.currentTime = time;
+    });
+
+    volumeBar.addEventListener("input", function() {
+        video.volume = volumeBar.value / 100;
+    });
+});
 </script>
 
 </body>
